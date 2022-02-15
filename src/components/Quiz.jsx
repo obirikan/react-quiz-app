@@ -2,16 +2,22 @@ import React,{useState,useContext} from 'react'
 import { Question } from './helpers/QuestionBank'
 import { QuizContext } from './helpers/context'
 const Quiz = () => {
-  const{score,setscore}=useContext(QuizContext)
+  const{score,setscore,setgame}=useContext(QuizContext)
   const[current,setCurrent]=useState(0)
   const[optionChosen,setOption]=useState('')
 
   const nextQuestion=()=>{
-     if(Question[current].answer == optionChosen){
+     if(Question[current].answer === optionChosen){
        setscore(score + 1)
      }
      alert(score)
      setCurrent(current+1)
+  }
+  const finishQuiz=()=>{
+    if(Question[current].answer === optionChosen){
+      setscore(score + 1)
+    }
+    setgame('endscreen')
   }
   return (
     <div className='quiz'>
@@ -22,7 +28,10 @@ const Quiz = () => {
         <button onClick={()=>setOption('C')}>{Question[current].optionC}</button>
         <button onClick={()=>setOption('D')}>{Question[current].optionD}</button>
       </div>
-      <button onClick={nextQuestion}>next question</button>
+      {current===Question.length-1?
+       (<button onClick={finishQuiz}>finish quiz</button>):
+       ( <button onClick={nextQuestion}>next question</button>)
+      }
     </div>
   )
 }

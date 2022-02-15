@@ -5,7 +5,7 @@ export const Question=[
         optionB:'2',
         optionC:'34',
         optionD:'1',
-        answer:"C"
+        answer:"B"
     },
     {
         prompt:'best shs school?',

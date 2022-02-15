@@ -7,7 +7,11 @@ const Quiz = () => {
   const[optionChosen,setOption]=useState('')
 
   const nextQuestion=()=>{
-
+     if(Question[current].answer == optionChosen){
+       setscore(score + 1)
+     }else{
+       
+     }
   }
   return (
     <div className='quiz'>

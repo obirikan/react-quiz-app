@@ -15,10 +15,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition:;
 }
 
-.menu button{
+.menu button ,.Quiz button{
   width:300px;
   height: 50px;
   margin: 5px ;
@@ -26,4 +25,16 @@
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.Quiz{
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: lightseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }

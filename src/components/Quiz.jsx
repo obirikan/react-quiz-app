@@ -20,7 +20,7 @@ const Quiz = () => {
     setgame('endscreen')
   }
   return (
-    <div className='quiz'>
+    <div className='Quiz'>
       <h1>{Question[current].prompt}</h1>
       <div className='option'>
         <button onClick={()=>setOption('A')}>{Question[current].optionA}</button>

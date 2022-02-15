@@ -10,7 +10,6 @@ const Quiz = () => {
      if(Question[current].answer === optionChosen){
        setscore(score + 1)
      }
-     alert(score)
      setCurrent(current+1)
   }
   const finishQuiz=()=>{

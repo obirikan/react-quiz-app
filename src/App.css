@@ -9,7 +9,7 @@
 .menu{
   width: 500px;
   height: 500px;
-  border-radius: 10px;
+  border-radius: 11px;
   background-color: lightseagreen;
   display: flex;
   justify-content: center;

@@ -3,7 +3,6 @@ import { QuizContext } from './helpers/context'
 import { Question } from './helpers/QuestionBank'
 const EndScreen = () => {
   const {score,setscore,setgame}=useContext(QuizContext)
-
   const restartQuiz=()=>{
     setscore(0)
     setgame('menu')
